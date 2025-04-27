@@ -1,0 +1,9 @@
+<!ELEMENT employees (#PCDATA|employee)*>
+<!ELEMENT employee (firstname,lastname,title,division,building,room,supervisor)>
+<!ELEMENT firstname (#PCDATA)>
+<!ELEMENT lastname (#PCDATA)>
+<!ELEMENT title (#PCDATA)>
+<!ELEMENT division (#PCDATA)>
+<!ELEMENT building (#PCDATA)>
+<!ELEMENT room (#PCDATA)>
+<!ELEMENT supervisor (#PCDATA)>
