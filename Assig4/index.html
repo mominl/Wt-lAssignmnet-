@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Assig 4 <br>Simple Calculator</br></title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin-top: 50px;
+    }
+
+    h1 {
+      font-size: 2em;
+      color: #333;
+    }
+
+    input[type="text"] {
+      width: 300px;
+      font-size: 2em;
+      text-align: right;
+      margin-bottom: 20px;
+      padding: 10px;
+    }
+
+    .buttons input[type="button"] {
+      width: 60px;
+      height: 60px;
+      font-size: 1.5em;
+      margin: 5px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <h1>Simple Calculator</h1>
+  <input type="text" id="tbox" value="0" readonly />
+  <br /><br />
+
+  <div class="buttons">
+    <input type="button" value="7" onclick="setTboxValue('7')">
+    <input type="button" value="8" onclick="setTboxValue('8')">
+    <input type="button" value="9" onclick="setTboxValue('9')">
+    <input type="button" value="+" onclick="setTboxValue('+')">
+    <br>
+    <input type="button" value="4" onclick="setTboxValue('4')">
+    <input type="button" value="5" onclick="setTboxValue('5')">
+    <input type="button" value="6" onclick="setTboxValue('6')">
+    <input type="button" value="-" onclick="setTboxValue('-')">
+    <br>
+    <input type="button" value="1" onclick="setTboxValue('1')">
+    <input type="button" value="2" onclick="setTboxValue('2')">
+    <input type="button" value="3" onclick="setTboxValue('3')">
+    <input type="button" value="*" onclick="setTboxValue('*')">
+    <br>
+    <input type="button" value="0" onclick="setTboxValue('0')">
+    <input type="button" value="." onclick="setTboxValue('.')">
+    <input type="button" value="=" onclick="calculate()">
+    <input type="button" value="/" onclick="setTboxValue('/')">
+    <br><br>
+    <input type="button" value="CLEAR" onclick="clearTbox()">
+    <input type="button" value="BACKSPACE" onclick="backspace()">
+  </div>
+
+  <script src="index.js"></script>
+</body>
+</html>
