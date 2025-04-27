@@ -1,0 +1,38 @@
+employees.xml
+<!DOCTYPE html>
+<html>
+ <head>
+ <title>WTL Exercise 6</title>
+ <style>
+ #frame1
+ {
+ border: 10px solid green;
+ border-radius: 20px;
+ animation: colorchange1 3s infinite;
+ }
+ #frame2
+ {
+ border: 10px solid yellow;
+ border-radius: 20px;
+ animation: colorchange2 3s infinite;
+ }
+ @keyframes colorchange1
+ {
+ 50% {border-color: lightgrey;}
+ }
+ @keyframes colorchange2
+ {
+ 50% {border-color: red;}
+ }
+ </style>
+ </head>
+ <body>
+ <center>
+ <h1>WTL Exercise 6 || E-BookShop System || TCOA08 K.Abhishek</h1>
+ <iframe id="frame1" width="30%" height="300px" src="add.php"></iframe>
+ <iframe id="frame2" width="30%" height="300px" src="delete.php"></iframe>
+ <iframe id="frame1" width="30%" height="300px" src="update.php"></iframe>
+ <iframe id="frame2" width="48.5%" height="320px" src="view.php"></iframe>
+ </center>
+ </body>
+</html>
