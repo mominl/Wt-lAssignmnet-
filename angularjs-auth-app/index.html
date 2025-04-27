@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html ng-app="authApp">
+<head>
+  <meta charset="UTF-8">
+  <title>AngularJS Registration & Login</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+  <script src="app.js"></script>
+</head>
+<body ng-controller="AuthController">
+
+  <div class="container">
+    <h2>{{ currentPage === 'login' ? 'Login' : 'Register' }}</h2>
+
+    <!-- Registration Form -->
+    <form ng-show="currentPage === 'register'" ng-submit="register()">
+      <input type="text" placeholder="First Name" ng-model="registerData.firstName" required />
+      <input type="text" placeholder="Last Name" ng-model="registerData.lastName" required />
+      <input type="text" placeholder="Username" ng-model="registerData.username" required />
+      <input type="password" placeholder="Password" ng-model="registerData.password" required />
+      <button type="submit">Register</button>
+      <p class="link" ng-click="switchPage('login')">Already have an account? Login here.</p>
+    </form>
+
+    <!-- Login Form -->
+    <form ng-show="currentPage === 'login'" ng-submit="login()">
+      <input type="text" placeholder="Username" ng-model="loginData.username" required />
+      <input type="password" placeholder="Password" ng-model="loginData.password" required />
+      <button type="submit">Login</button>
+      <p class="link" ng-click="switchPage('register')">Don't have an account? Register here.</p>
+    </form>
+
+    <div class="message" ng-if="message">{{ message }}</div>
+  </div>
+
+</body>
+</html>
